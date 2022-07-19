@@ -5,6 +5,7 @@ EXPOSE 80
 
 #update and install nginx
 RUN apt-get -y update 
+RUN apt-get -y upgrade 
 RUN apt-get -y install nginx
 
 #install ssh
@@ -12,10 +13,6 @@ RUN apt-get -y install openssh-server
 
 #install tor 
 RUN apt-get -y install tor
-
-#delete
-RUN apt-get -y install vim
-RUN apt-get -y install nano
 
 #make user for ssh login
 RUN useradd migue
